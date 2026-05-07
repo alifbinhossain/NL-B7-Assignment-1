@@ -1,18 +1,21 @@
 // Problem 1
 const filterEvenNumbers = (numbers: number[]): number[] =>
   numbers.filter((num) => num % 2 === 0);
-// console.log('--Problem 1--', filterEvenNumbers([1, 2, 3, 4, 5, 6]));
+
+filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
 // Problem 2
 const reverseString = (str: string): string => str.split('').reverse().join('');
-// console.log('--Problem 2--', reverseString('typescript'));
+
+reverseString('typescript');
 
 // Problem 3
 type StringOrNumber = string | number;
 const checkType = (input: StringOrNumber): string =>
   typeof input === 'string' ? 'String' : 'Number';
-// console.log('--Problem 3--', checkType('Hello'));
-// console.log('--Problem 3--', checkType(42));
+
+checkType('Hello');
+checkType(42);
 
 // Problem 4
 type User = {
@@ -24,7 +27,7 @@ const user: User = { id: 1, name: 'John Doe', age: 21 };
 
 const getProperty = (obj: User, key: keyof User) => obj[key];
 
-// console.log('--Problem 4--', getProperty(user, 'name'));
+getProperty(user, 'name');
 
 // Problem 5
 interface Book {
@@ -48,7 +51,7 @@ const toggleReadStatus = (book: Book): ReturnToggleReadStatus => ({
   isRead: true,
 });
 
-// console.log('--Problem 5--', toggleReadStatus(myBook));
+toggleReadStatus(myBook);
 
 // Problem 6
 // Main Class
@@ -79,10 +82,11 @@ class Student extends Person {
 }
 
 const student = new Student('Alice', 20, 'A');
-// console.log('--Problem 6--', student.getDetails());
+
+student.getDetails();
 
 // Problem 7
 const getIntersection = (arr1: number[], arr2: number[]): number[] =>
   arr1.filter((num) => arr2.includes(num));
 
-// console.log('--Problem 7--', getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
